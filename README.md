@@ -5,7 +5,7 @@
 
 ## Demo
 
----<img width="2160" height="1247" alt="OllamaDemo" src="https://github.com/user-attachments/assets/66af320c-6481-430f-8ade-b65ca60ba1e1" />
+<img width="2160" height="1247" alt="OllamaDemo" src="https://github.com/user-attachments/assets/66af320c-6481-430f-8ade-b65ca60ba1e1" />
 
 
 ## Features

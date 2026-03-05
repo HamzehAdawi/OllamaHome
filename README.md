@@ -1,20 +1,19 @@
 
 # OllamaHome
 
-**OllamaHome** is a Java Spring Boot, Spring AI web app with a Thymeleaf frontend that lets users chat with Locally hosted Ollama large language models. It supports dynamic model selection via Spring AI and configuration properties for easy switching. Featuring a clean UI and seamless local API integration, it delivers an intuitive and flexible AI chat experience.
+**OllamaHome** is a web application built with Spring AI and a JavaScript that lets users run locally hosted Ollama LLM's across their home network with a clean and simple UI to interface. 
+
+## Features
+- Menu to interface locally run ollama models  
+- Resume adjustment / enhancement 
+- Real-time chat with persistent saves over any home device  
+- Simple to setup and interchange or download ollama models 
+- Dynamic configuration of UI menu properties
 
 ## Demo
 
 <img width="2160" height="1247" alt="OllamaDemo" src="https://github.com/user-attachments/assets/66af320c-6481-430f-8ade-b65ca60ba1e1" />
 
-
-## Features
-
-- Chat interface powered by LOCALLY hosted Ollama LLM backend  
-- Resume adjustment / enhancement feature
-- Real-time chat over any home device  
-- Simple setup and model switching
-- Dynamic configuration UI properties
 
 
 ## Getting Started

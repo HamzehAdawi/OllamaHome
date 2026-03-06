@@ -1,7 +1,7 @@
 
 # OllamaHome
 
-**OllamaHome** is a web application built with Spring AI and a JavaScript that lets users run locally hosted Ollama LLM's across their home network with a clean and simple UI to interface. 
+**OllamaHome** is a web application that allows you to interface locally hosted Ollama LLM's. Equip your home with a clean local web app cross their home network with a clean and simple UI to interface. 
 
 ## Features
 - Menu to interface locally run ollama models  

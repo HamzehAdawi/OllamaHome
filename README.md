@@ -12,9 +12,7 @@
 
 ## Demo
 
-<img width="1328" height="895" alt="image" src="https://github.com/user-attachments/assets/f4591d4b-4655-43db-9730-58526a046a1e" />
-
-
+<img width="1200" height="563" alt="image" src="https://github.com/user-attachments/assets/1905b4a8-96b5-4778-9e2b-c1c579d45604" />
 
 
 ## Getting Started

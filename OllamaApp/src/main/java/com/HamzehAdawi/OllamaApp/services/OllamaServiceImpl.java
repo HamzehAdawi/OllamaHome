@@ -33,9 +33,11 @@ public class OllamaServiceImpl implements OllamaService {
     public String chat(String userInput) {
 
         var prompt = chatClient.prompt()
+          
                 .system("You are a helpful assistant. Respond in natural language. Prefer plain code blocks for coding questions.")
                 .user(userInput)
                 .options(OllamaOptions.builder().model(activeModel).build());
+
 
         if (mentionsDateTime(userInput)) {
             prompt = prompt.tools(new DateTimeTools());

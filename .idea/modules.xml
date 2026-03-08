@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/OllamaApp.iml" filepath="$PROJECT_DIR$/.idea/OllamaApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/OllamaChat.iml" filepath="$PROJECT_DIR$/.idea/OllamaChat.iml" />
     </modules>
   </component>
 </project>

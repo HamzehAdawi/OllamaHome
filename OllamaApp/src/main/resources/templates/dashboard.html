@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html" lang="eng">
 <head>
     <link rel="stylesheet" th:href="@{/css/dashboard-style.css}"/>
-    <title>Ollama</title>
+    <title>OllamaHome</title>
 </head>
 
 <body>
@@ -10,12 +10,12 @@
     <div class="container header-inner">
         <div class="brand">
             <img src="/images/Ollama_pic.png" alt="Ollama"/>
-            <h1>Ollama AI</h1>
+            <h1>Ollama Home</h1>
         </div>
         <nav class="nav">
-            <a href="/">Home</a>
-            <a href="https://github.com/HamzehAdawi/OllamaChat" target="_blank" rel="noopener">Source</a>
-            <a href="/">Demo</a>
+            <a style="font-weight: bold" href="/">Home</a>
+            <a style="font-weight: bold" href="https://github.com/HamzehAdawi/OllamaChat" target="_blank" rel="noopener">Source</a>
+            <a style="font-weight: bold" href="/Resume">Analyze Resume</a>
         </nav>
     </div>
 </header>
@@ -23,7 +23,22 @@
 <main class="container">
     <section class="panel">
         <div class="panel-header">
-            <h2 th:text="'Model: ' + ${ollamaModel}"></h2>
+            <h2>
+                <span style="color: #c8dbeb;">Model: </span>
+                <span th:text="${ollamaModel}" style="color: #6ee7b7;"></span>
+            </h2>
+            <form style="margin-left: auto;" method="get" action="/">
+                <label>
+                    <select name="selectedModel" class="model-dropdown" onchange="this.form.submit()">
+                        <option value="qwen2.5" th:selected="${ollamaModel == 'qwen2.5'}">qwen2.5</option>
+                        <option value="dolphin-mixtral" th:selected="${ollamaModel == 'dolphin-mixtral'}">dolphin-mixtral</option>
+                        <option value="gemma2" th:selected="${ollamaModel == 'gemma2'}">gemma2</option>
+                        <option value="llama3.1" th:selected="${ollamaModel == 'llama3.1'}">llama3.1</option>
+                        <option value="llama3" th:selected="${ollamaModel == 'llama3'}">llama3</option>
+                        <option value="llama2" th:selected="${ollamaModel == 'llama2'}">llama2</option>
+                    </select>
+                </label>
+            </form>
         </div>
 
         <div class="panel-body">
@@ -36,13 +51,13 @@
             <div class="chat-box">
                 <form th:action="@{/}" method="post" onsubmit="return showLoader()">
                     <div id="chat" th:if="${messageList != null and !#lists.isEmpty(messageList)}">
-                        <div th:each="msg : ${messageList}">
-                            <div class="message"
-                                 th:utext="${#strings.replace(#strings.replace(msg, 'Me:', '<strong>Me:</strong>'), 'Ollama:', '<strong>Ollama:</strong>')}">
-                            </div>
+                        <div class="message"
+                             th:each="msg : ${messageList}"
+                             th:classappend="${#strings.startsWith(msg,'Me:')} ? ' me' : ' ollama'"
+                             th:utext="${#strings.replace(#strings.replace(msg, 'Me:', ''), 'Ollama:', '')}">
                         </div>
                     </div>
-
+                    <br>
                     <div class="input-row">
                         <textarea
                             placeholder="Chat with Ollama..."
@@ -59,13 +74,14 @@
         </div>
     </section>
 
-    <footer class="site-footer">
-        <div class="container footer-inner">
-            <small>Contributions welcome — see <a href="/../CONTRIBUTING.md" target="_blank">CONTRIBUTING</a> and <a href="/../CODE_OF_CONDUCT.md" target="_blank">CODE_OF_CONDUCT</a></small>
-        </div>
-    </footer>
+
 </main>
 
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <small>Contributions welcome — see <a href="/../CONTRIBUTING.md" target="_blank">CONTRIBUTING</a> and <a href="/../CODE_OF_CONDUCT.md" target="_blank">CODE_OF_CONDUCT</a></small>
+    </div>
+</footer>
 <script th:src="@{/js/dashboard-script.js}"></script>
 </body>
 </html>

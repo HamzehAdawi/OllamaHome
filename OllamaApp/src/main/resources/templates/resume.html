@@ -1,10 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html" lang="eng">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+  <link rel="stylesheet"/>
+  <title>RESUME HELPER</title>
 </head>
 <body>
-$END$
+  <p>RESUME HELPER</p>
+  <form th:action="@{/Resume}" method="post" enctype="multipart/form-data">
+    <label>Select your resume</label>
+
+    <input type="file" id="file-selector" name="resumeFile" th:value="${resumeFile}">
+    <br>
+    <label for="job-description"></label>
+      <textarea
+        type="text"
+        id="job-description"
+        name="jobDescription"
+        placeholder="Job Description"
+        rows="50"
+        th:value="${jobDescription}"
+        style="height: 80%; width: 80%" >
+
+      </textarea>
+    <br>
+    <button type="submit">Change Summary</button>
+  </form>
+  <p th:text="${summary}"></p>
+  <br>
+  <p th:text="${coverLetter}"></p>
+  <p th:text="${skills}"></p>
 </body>
 </html>

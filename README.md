@@ -3,7 +3,7 @@
 
 # OllamaHome
 
-**OllamaHome** is a web application that allows you to interface locally hosted Ollama LLM's. Adds a web app across your home network with a clean and simple UI to interface. Includes a resume tailoring feature. 
+**OllamaHome** allows you to interface locally hosted Ollama LLM's. Adds a web app across your home network with a clean and simple UI to interface. Includes a resume tailoring feature. 
 
 ## Features
 - Clean UI and menu to interface locally run ollama models  
